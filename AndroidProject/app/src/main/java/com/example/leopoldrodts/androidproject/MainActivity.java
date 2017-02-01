@@ -1,8 +1,10 @@
 package com.example.leopoldrodts.androidproject;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
+
         getSupportActionBar().setTitle("Home");
 
 
@@ -43,28 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent;
-        // Activate the navigation drawer toggle
-      /*  if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }*/
-        switch (item.getItemId()) {
-            case R.id.MenuSync:
-                //-------------------A completer------------------
-                Toast.makeText(MainActivity.this, "Ajouter!", Toast.LENGTH_SHORT).show();
-                return true;
-           /* case R.id.action_settings:
-                intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-                return true;
-            case R.id.action_propos:
-                intent = new Intent(MainActivity.this, AndroidActivity.class);
-                startActivity(intent);
-                return true;*/
-            default :
-                return super.onOptionsItemSelected(item);
-        }
-    }
+
+
+
 }
