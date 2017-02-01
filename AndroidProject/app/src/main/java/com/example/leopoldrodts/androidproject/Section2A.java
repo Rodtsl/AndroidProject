@@ -32,7 +32,7 @@ public class Section2A extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         Edt2A=(ListView)findViewById(R.id.ListEDT2A);
-        ArrayAdapter<String> adaptater=new ArrayAdapter<String>(this,NomEdt);
+        ArrayAdapter<String> adaptater=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,NomEdt);
         Edt2A.setAdapter(adaptater);
     }
 
