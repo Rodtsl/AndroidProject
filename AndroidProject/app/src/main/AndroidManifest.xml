@@ -25,7 +25,12 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".SectionEDT"></activity>
+        <activity android:name=".SectionEDT" />
+        <activity android:name=".PdfActivity" />
+        <activity
+            android:name=".Drawer_Activity"
+            android:label="@string/title_activity_drawer_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

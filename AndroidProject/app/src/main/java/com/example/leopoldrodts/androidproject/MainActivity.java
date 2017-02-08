@@ -1,14 +1,10 @@
 package com.example.leopoldrodts.androidproject;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import net.sf.andpdf.pdfviewer.PdfViewerActivity;
 
@@ -33,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Debug boutton 2A");
         Button buttonEDT = (Button) findViewById(R.id.buttonEDT);
         Button buttonPDF = (Button) findViewById(R.id.buttonPDF);
+        Button buttondrawer = (Button) findViewById(R.id.buttondrawer);
 
         button1A.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -47,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Section2A.class);
                 startActivity(intent);
             }
-
-
         });
 
         buttonEDT.setOnClickListener(new View.OnClickListener(){
@@ -56,24 +51,27 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, SectionEDT.class);
                 startActivity(intent);
             }
+        });
 
-
+        buttondrawer.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, Drawer_Activity.class);
+                startActivity(intent);
+            }
         });
 
 
-
-
-  /*      buttonPDF.setOnClickListener(new View.OnClickListener() {
+        buttonPDF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ouvrirPDF("edtInfo2A20170206");
             }
-        });*/
+        });
 
 
 
     }
-   /* private String cheminPDF(String nomfichier){
+    private String cheminPDF(String nomfichier){
         File f = new File(getCacheDir()+"/"+nomfichier+".pdf");
         if (!f.exists()) try {
 
@@ -94,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PdfActivity.class);
         intent.putExtra(PdfViewerActivity.EXTRA_PDFFILENAME, cheminPDF(nom));
         startActivity(intent);
-    }*/
+    }
 
 
 }

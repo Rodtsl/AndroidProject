@@ -2,10 +2,6 @@ package com.example.leopoldrodts.androidproject;
 
 import net.sf.andpdf.pdfviewer.PdfViewerActivity;
 
-/**
- * Created by leopold.rodts on 08/02/2017.
- */
-
 public class PdfActivity extends PdfViewerActivity {
 
     public int getPreviousPageImageResource() { return R.drawable.left_arrow; }
@@ -19,3 +15,4 @@ public class PdfActivity extends PdfViewerActivity {
     public int getPdfPasswordExitButton() { return R.id.btExit; }
     public int getPdfPageNumberEditField() { return R.id.pagenum_edit; }
 }
+
