@@ -1,19 +1,13 @@
 package com.example.leopoldrodts.androidproject;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleExpandableListAdapter;
 import android.widget.Toast;
-
-import static java.security.AccessController.getContext;
 
 
 public class Section2A extends AppCompatActivity {
@@ -93,7 +87,11 @@ public class Section2A extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, AndroidActivity.class);
                 startActivity(intent);
                 return true;*/
+            case 16908332:
+                this.finish();
+                return true;
             default:
+
                 return super.onOptionsItemSelected(item);
         }
     }
