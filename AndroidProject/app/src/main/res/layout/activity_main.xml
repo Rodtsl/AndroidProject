@@ -53,4 +53,22 @@
         android:layout_alignBottom="@+id/button1A"
         android:layout_centerHorizontal="true"
         android:id="@+id/QuestionMain" />
+
+    <Button
+        android:text="Ouvrir PDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48dp"
+        android:id="@+id/buttonPDF" />
+
+    <Button
+        android:text="EDTParMois(Provisoire)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:id="@+id/buttonEDT"
+        android:layout_below="@+id/button1A"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

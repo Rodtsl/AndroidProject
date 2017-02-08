@@ -8,9 +8,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListAdapter;
 import android.widget.ListView;
+import android.widget.SimpleExpandableListAdapter;
 import android.widget.Toast;
 
+import static java.security.AccessController.getContext;
 
 
 public class Section2A extends AppCompatActivity {
@@ -36,6 +39,40 @@ public class Section2A extends AppCompatActivity {
         Edt2A.setAdapter(adaptater);
     }
 
+
+
+
+
+
+  /*  mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            //Toast.makeText(OSXActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+            Intent intent;
+            switch((int) id){
+                case 0 :
+                    intent = new Intent(AndroidActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    break;
+                case 1 :
+                    intent = new Intent(AndroidActivity.this, IOSActivity.class);
+                    startActivity(intent);
+                    break;
+                case 2 :
+                    intent = new Intent(AndroidActivity.this, WindowsActivity.class);
+                    startActivity(intent);
+                    break;
+                case 3 :
+                    intent = new Intent(AndroidActivity.this, OSXActivity.class);
+                    startActivity(intent);
+                    break;
+                case 4 :
+                    intent = new Intent(AndroidActivity.this, LinuxActivity.class);
+                    startActivity(intent);
+                    break;
+            }
+        }
+    });*/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
