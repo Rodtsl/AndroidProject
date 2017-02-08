@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Debug boutton 2A");
         Button buttonEDT = (Button) findViewById(R.id.buttonEDT);
         Button buttonPDF = (Button) findViewById(R.id.buttonPDF);
+        Button buttondrawer = (Button) findViewById(R.id.buttondrawer);
+
         button1A.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, Section1A.class);
@@ -51,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        buttondrawer.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, Drawer_Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
         buttonPDF.setOnClickListener(new View.OnClickListener() {

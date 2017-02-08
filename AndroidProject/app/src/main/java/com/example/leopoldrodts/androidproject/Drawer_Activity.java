@@ -1,9 +1,10 @@
-package com.example.kevin.testmenu;
+package com.example.leopoldrodts.androidproject;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.view.View;
+import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,17 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-public class Drawer_activity extends AppCompatActivity
+public class Drawer_Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer_activity);
+        setContentView(R.layout.activity_drawer_);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -42,34 +40,6 @@ public class Drawer_activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        Button button1A = (Button) findViewById(R.id.button1A);
-        System.out.println("Debug boutton 1A");
-        Button button2A = (Button) findViewById(R.id.button2A);
-        System.out.println("Debug boutton 2A");
-
-        button1A.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Toast.makeText(Drawer_activity.this, "1A!", Toast.LENGTH_SHORT).show();
-                /*
-                Intent intent = new Intent(Drawer_activity.this, Section1A.class);
-                startActivity(intent);
-                */
-            }
-
-
-        });
-        button2A.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Toast.makeText(Drawer_activity.this, "2A!", Toast.LENGTH_SHORT).show();
-                /*
-                Intent intent = new Intent(Drawer_activity.this, Section2A.class);
-                startActivity(intent);
-                */
-            }
-
-
-        });
-
     }
 
     @Override
@@ -85,7 +55,7 @@ public class Drawer_activity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer_activity, menu);
+        getMenuInflater().inflate(R.menu.drawer_, menu);
         return true;
     }
 
