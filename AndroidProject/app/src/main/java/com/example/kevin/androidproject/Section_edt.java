@@ -1,45 +1,43 @@
-package com.example.leopoldrodts.androidproject;
+package com.example.kevin.androidproject;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ExpandableListView.OnChildClickListener;
-import android.widget.ExpandableListView.OnGroupClickListener;
-import android.widget.ExpandableListView.OnGroupCollapseListener;
-import android.widget.ExpandableListView.OnGroupExpandListener;
-import android.widget.Toast;
+import android.view.ViewGroup;
 
-public class SectionEDT extends Activity {
+/**
+ * Created by kevin on 09/02/2017.
+ */
 
+public class Section_edt extends Fragment{
+    View myView;
+    /*
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-
+    */
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_edt);
-
-        // get the listview
-        expListView = (ExpandableListView) findViewById(R.id.lvExp);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        myView = inflater.inflate(R.layout.activity_section_edt,container,false);
+        return myView;
+    }
+    /*
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState){
+        expListView = (ExpandableListView) getActivity().findViewById(R.id.lvExp);
 
         // preparing list data
         prepareListData();
-
-        listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+        listAdapter = new ExpandableListAdapter(listDataHeader, listDataChild);
+        //listAdapter = new ExpandableListAdapter(getActivity(), listDataHeader, listDataChild);
 
         // setting list adapter
         expListView.setAdapter(listAdapter);
     }
-
-    /*
-     * Preparing the list data
-     */
     private void prepareListData() {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
@@ -73,4 +71,5 @@ public class SectionEDT extends Activity {
         listDataChild.put(listDataHeader.get(1), Fevrier);
         listDataChild.put(listDataHeader.get(2), Mars);
     }
+   */
 }
