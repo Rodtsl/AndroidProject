@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
-    <resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string-array name="edt">
         <item>edt semaine 1</item>
         <item>edt semaine 2</item>
