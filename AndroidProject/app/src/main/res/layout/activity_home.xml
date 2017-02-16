@@ -12,10 +12,16 @@
         android:text="Vous êtes sur le Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:id="@+id/textView2"
         android:layout_below="@+id/textSection1A"
-        android:layout_alignLeft="@+id/textSection1A"
-        android:layout_alignStart="@+id/textSection1A"
-        android:layout_marginTop="143dp"
-        android:id="@+id/textView2" />
+        android:layout_centerHorizontal="true" />
 
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
