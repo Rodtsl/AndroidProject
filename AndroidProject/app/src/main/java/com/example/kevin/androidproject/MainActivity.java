@@ -1,9 +1,7 @@
 package com.example.kevin.androidproject;
 
 import android.app.FragmentManager;
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -55,7 +53,6 @@ public class MainActivity extends AppCompatActivity
                 .replace(R.id.content_frame
                         ,new Home())
                 .commit();
-
     }
 
     @Override
