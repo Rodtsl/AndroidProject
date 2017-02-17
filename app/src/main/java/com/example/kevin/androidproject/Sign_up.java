@@ -3,12 +3,11 @@ package com.example.kevin.androidproject;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class Sign_up extends AppCompatActivity {
 
@@ -25,7 +24,6 @@ public class Sign_up extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 inscription(login.getText()+"",mdp.getText()+"",nom.getText()+"",prenom.getText()+"");
-                Toast.makeText(Sign_up.this, login.getText(), Toast.LENGTH_SHORT).show();
                 redirection();
             }
         });

@@ -15,7 +15,7 @@ import android.widget.ListView;
 
 public class Section_2A extends Fragment{
     View myView;
-
+    private ListView Edt2A;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -23,7 +23,7 @@ public class Section_2A extends Fragment{
 
         return myView;
     }
-    private ListView Edt2A;
+
     public String[] NomEdt= new String[]{
             "EdtS1","EdtS2"
     };

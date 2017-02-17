@@ -3,24 +3,21 @@ package com.example.kevin.androidproject;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -215,17 +212,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isEmailValid(String email) {
-        ContentValues value = new ContentValues();
-        value.put("id","1");
-        value.put("login","hoang");
-        value.put("passeword","123456");
-        value.put("nom","cornu");
-        value.put("prenom","hoang");
-
         Database db = new Database(this);
         SQLiteDatabase database = db.getWritableDatabase();
-
-        database.insert("Users",null,value);
 
         Cursor sql = database.rawQuery("SELECT * FROM Users WHERE login = ?", new String[]{email});
         String [] res = cursorToString(sql);

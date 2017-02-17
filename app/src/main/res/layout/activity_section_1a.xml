@@ -12,10 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ListEDT1A"
+        android:entries="@array/edt"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textSection1A"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:entries="@array/edt" />
+        android:layout_marginBottom="104dp" />
+
+    <Button
+        android:text="Ajout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:id="@+id/Ajout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
