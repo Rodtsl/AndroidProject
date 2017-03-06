@@ -1,6 +1,5 @@
 package com.example.kevin.androidproject;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -44,6 +43,7 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
     }
 
     @Override public void onCreate(SQLiteDatabase db) {
+        /*
         db.execSQL(METIER_TABLE_CREATE);
         db.execSQL(LIST_TABLE_CREATE);
         ContentValues user = new ContentValues();
@@ -58,9 +58,12 @@ public class DatabaseSqlite extends SQLiteOpenHelper {
         ContentValues liste2 = new ContentValues();
         liste2.put("nom","edt2");
         db.insert("Liste",null,liste2);
+        */
+
     }
 
     @Override public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        //s'active quand le numéro de version change
         db.execSQL("drop table Users");
         db.execSQL("drop table Liste");
         db.execSQL(METIER_TABLE_CREATE);

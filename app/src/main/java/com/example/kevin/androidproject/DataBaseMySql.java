@@ -28,7 +28,7 @@ public class DataBaseMySql extends AsyncTask<Void, Void, String[][]> {
 // Envoi de la requête avec HTTPPost
         try{
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost("https://hoangphuoccornu.000webhostapp.com/test.php");
+            HttpPost httppost = new HttpPost("https://hoangphuoccornu.000webhostapp.com/Android/users.php");
             //httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             HttpResponse response = httpclient.execute(httppost);
             HttpEntity entity = response.getEntity();
