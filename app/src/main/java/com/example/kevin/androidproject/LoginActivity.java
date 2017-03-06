@@ -212,7 +212,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isEmailValid(String email) {
-        Database db = new Database(this);
+        DatabaseSqlite db = new DatabaseSqlite(this);
         SQLiteDatabase database = db.getWritableDatabase();
 
         Cursor sql = database.rawQuery("SELECT * FROM Users WHERE login = ?", new String[]{email});
@@ -236,7 +236,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isPasswordValid(String password) {
-        Database db = new Database(this);
+        DatabaseSqlite db = new DatabaseSqlite(this);
         SQLiteDatabase database = db.getWritableDatabase();
         Cursor sql = database.rawQuery("SELECT * FROM Users WHERE passeword = ?", new String[]{password});
         String [] res = cursorToString(sql);

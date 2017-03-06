@@ -42,7 +42,7 @@ public class Section_1A extends Fragment{
     }
 
     public void AjoutList(){
-        Database db = new Database(getActivity());
+        DatabaseSqlite db = new DatabaseSqlite(getActivity());
         SQLiteDatabase database = db.getWritableDatabase();
         ContentValues liste1 = new ContentValues();
         liste1.put("nom","Valeur Ajoutée");
@@ -52,7 +52,7 @@ public class Section_1A extends Fragment{
     }
 
     public String [] NomEdt(){
-        Database db = new Database(getActivity());
+        DatabaseSqlite db = new DatabaseSqlite(getActivity());
         SQLiteDatabase database = db.getReadableDatabase();
         Cursor sql = database.rawQuery("SELECT * FROM Liste",null);
         String [] res = cursorToString(sql);

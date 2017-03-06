@@ -27,23 +27,20 @@ public class Sign_up extends AppCompatActivity {
                 redirection();
             }
         });
-
     }
     private void redirection(){
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
     private void inscription(String login,String mdp,String nom, String prenom){
-        Database db = new Database(this);
+        DatabaseSqlite db = new DatabaseSqlite(this);
         ContentValues value = new ContentValues();
         value.put("id","2");
         value.put("login",login);
         value.put("passeword",mdp);
         value.put("nom",nom);
         value.put("prenom",prenom);
-
         SQLiteDatabase database = db.getWritableDatabase();
-
         database.insert("Users",null,value);
     }
 }

@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * Created by kevin on 15/02/2017.
  */
 
-public class Database extends SQLiteOpenHelper {
+public class DatabaseSqlite extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "base.sqlite";
     private static final int VERSION = 1;
     public static final String METIER_KEY = "id";
@@ -39,7 +39,7 @@ public class Database extends SQLiteOpenHelper {
                     LIST_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     LIST_NOM + " TEXT);";
 
-    public Database(Context context) {
+    public DatabaseSqlite(Context context) {
         super(context, DATABASE_NAME, null, VERSION);
     }
 
@@ -61,11 +61,9 @@ public class Database extends SQLiteOpenHelper {
     }
 
     @Override public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        /*
         db.execSQL("drop table Users");
         db.execSQL("drop table Liste");
         db.execSQL(METIER_TABLE_CREATE);
         db.execSQL(METIER_TABLE_CREATE);
-        */
     }
 }
