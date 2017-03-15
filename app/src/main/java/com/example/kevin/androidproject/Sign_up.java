@@ -23,8 +23,12 @@ public class Sign_up extends AppCompatActivity {
         mSignupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                inscription(login.getText()+"",mdp.getText()+"",nom.getText()+"",prenom.getText()+"");
-                redirection();
+                if(mdp.getText().toString().length() >= 4) {
+                    inscription(login.getText() + "", mdp.getText() + "", nom.getText() + "", prenom.getText() + "");
+                    redirection();
+                }else{
+                    mdp.setError("Mot de passe trop court");
+                }
             }
         });
     }

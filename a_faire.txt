@@ -1,0 +1,4 @@
+Choses à faite:
+- Bundle
+- Refaire le traitement de login
+- Curseur à refaire (voir diapo)

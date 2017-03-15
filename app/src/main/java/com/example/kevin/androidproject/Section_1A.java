@@ -59,19 +59,23 @@ public class Section_1A extends Fragment{
         return res;
     }
     public String[] cursorToString(Cursor c){
-        String [] sql = new String[c.getCount()];
-        int i = 0;
-        if (c.getCount() == 0)
-            return sql;
-        c.moveToFirst();
-        while(true){
-            sql[i] = c.getString(1);
-            i++;
-            if(!c.moveToNext())
-                break;
+        if(c != null) {
+            String[] sql = new String[c.getCount()];
+            int i = 0;
+            if (c.getCount() == 0)
+                return sql;
+            c.moveToFirst();
+            while (true) {
+                sql[i] = c.getString(1);
+                i++;
+                if (!c.moveToNext())
+                    break;
 
+            }
+            c.close();
+            return sql;
+        }else{
+            return null;
         }
-        c.close();
-        return sql;
     }
 }

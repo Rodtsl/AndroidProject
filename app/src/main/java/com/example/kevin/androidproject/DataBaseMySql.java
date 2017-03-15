@@ -72,16 +72,3 @@ public class DataBaseMySql extends AsyncTask<Void, Void, String[][]> {
         return new String[0][0];
     }
 }
-/*
-    //lancer une requète//
-    BDD bdd = new BDD();
-    bdd.execute();
-    try {
-        String [][] basedonnees = bdd.get();
-        Toast.makeText(MainActivity.this, basedonnees[0][1], Toast.LENGTH_SHORT).show();
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    } catch (ExecutionException e) {
-        e.printStackTrace();
-    }
-*/
