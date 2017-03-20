@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kevin.androidproject">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,7 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PDFActivity" />
         <activity
             android:name=".SettingsActivity"
@@ -26,7 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Sign_up"></activity>
+        <activity android:name=".Sign_up" />
+        <activity
+            android:name=".Ajout_edt"
+            android:label="@string/title_activity_ajout_edt"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddActivity"></activity>
     </application>
 
 </manifest>

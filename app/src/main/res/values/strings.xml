@@ -96,4 +96,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_ajout_edt">Ajout_edt</string>
+    <string name="ajouter_un_edt">Ajouter un EDT</string>
+    <string name="title_activity_add">AddActivity</string>
 </resources>

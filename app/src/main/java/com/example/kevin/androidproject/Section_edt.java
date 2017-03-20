@@ -56,6 +56,16 @@ public class Section_edt extends Fragment{
         listDataHeader.add("Janvier");
         listDataHeader.add("Fevrier");
         listDataHeader.add("Mars");
+        listDataHeader.add("Avril");
+        listDataHeader.add("Mai");
+        listDataHeader.add("Juin");
+        listDataHeader.add("Juillet");
+        listDataHeader.add("Aout");
+        listDataHeader.add("Septembre");
+        listDataHeader.add("Octobre");
+        listDataHeader.add("Novembre");
+        listDataHeader.add("Decembre");
+
 
         // Adding child data
         List<String> Janvier = new ArrayList<String>();
@@ -76,10 +86,39 @@ public class Section_edt extends Fragment{
         Mars.add("EDT Semaine 11");
         Mars.add("EDT Semaine 12");
 
+        List<String> Avril = new ArrayList<String>();
+        Avril.add("EDT Semaine 13");
+        List<String> Mai = new ArrayList<String>();
+        Mai.add("EDT Semaine 14");
+        List<String> Juin = new ArrayList<String>();
+        Juin.add("EDT Semaine 15");
+        List<String> Juillet = new ArrayList<String>();
+        Juillet.add("EDT Semaine 16");
+        List<String> Aout = new ArrayList<String>();
+        Aout.add("EDT Vacances");
+        List<String> Septembre = new ArrayList<String>();
+        Septembre.add("EDT Vacances");
+        List<String> Octobre = new ArrayList<String>();
+        Octobre.add("EDT Vacances");
+        List<String> Novembre = new ArrayList<String>();
+        Novembre.add("EDT Vacances");
+        List<String> Decembre = new ArrayList<String>();
+        Decembre.add("EDT Noel");
 
         listDataChild.put(listDataHeader.get(0), Janvier); // Header, Child data
         listDataChild.put(listDataHeader.get(1), Fevrier);
         listDataChild.put(listDataHeader.get(2), Mars);
+        listDataChild.put(listDataHeader.get(3), Avril);
+        listDataChild.put(listDataHeader.get(4), Mai);
+        listDataChild.put(listDataHeader.get(5), Juin);
+        listDataChild.put(listDataHeader.get(6), Juillet);
+        listDataChild.put(listDataHeader.get(7), Aout);
+        listDataChild.put(listDataHeader.get(8), Septembre);
+        listDataChild.put(listDataHeader.get(9), Octobre);
+        listDataChild.put(listDataHeader.get(10), Novembre);
+        listDataChild.put(listDataHeader.get(11),Decembre);
+
     }
+
 
 }

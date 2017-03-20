@@ -37,9 +37,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Redirection vers l'ajout de l'edt", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
+                redirection();
             }
+
         });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -144,5 +147,10 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, PDFActivity.class);
         intent.putExtra(PdfViewerActivity.EXTRA_PDFFILENAME, cheminPDF(nom));
         startActivity(intent);
+    }
+    public void redirection(){
+        Intent intent = new Intent(this, AddActivity.class);
+        startActivity(intent);
+
     }
 }
