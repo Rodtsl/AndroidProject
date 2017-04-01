@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 /**
@@ -39,16 +38,6 @@ public class Home extends Fragment{
                 .scrollHandle(null)
                 .load();
         mAffichageCompteur = (TextView) getActivity().findViewById(R.id.affiche_compteur);
-        Button compteur = (Button) getActivity().findViewById(R.id.compteur);
-        compteur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getActivity(), CompteurService.class);
-                i.putExtra(EXTRA_COMPTEUR, mCompteur);
-                mCompteur ++;
-                mAffichageCompteur.setText("" + mCompteur);
-                getActivity().startService(i);
-            }
-        });
     }
+
 }

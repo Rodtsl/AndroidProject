@@ -33,6 +33,7 @@
             android:label="@string/title_activity_ajout_edt"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AddActivity"></activity>
+        <service android:name=".Myservice" />
     </application>
 
 </manifest>

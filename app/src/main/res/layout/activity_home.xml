@@ -34,11 +34,26 @@
         android:layout_marginTop="25dp" />
 
     <Button
-        android:id="@+id/compteur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/affiche_compteur"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:text="Compteur" />
+        android:id="@+id/button2"
+        android:text="Start Services"
+        android:onClick="startService"
+        android:layout_alignBaseline="@+id/affiche_compteur"
+        android:layout_alignBottom="@+id/affiche_compteur"
+        android:layout_toLeftOf="@+id/textSection1A"
+        android:layout_toStartOf="@+id/textSection1A" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Services"
+        android:id="@+id/button"
+        android:onClick="stopService"
+        android:layout_alignBaseline="@+id/affiche_compteur"
+        android:layout_alignBottom="@+id/affiche_compteur"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp" />
 </RelativeLayout>

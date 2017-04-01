@@ -1,13 +1,9 @@
 package com.example.kevin.androidproject;
 
 import android.app.FragmentManager;
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import net.sf.andpdf.pdfviewer.PdfViewerActivity;
 
@@ -151,6 +148,13 @@ public class MainActivity extends AppCompatActivity
     public void redirection(){
         Intent intent = new Intent(this, AddActivity.class);
         startActivity(intent);
+    }
+    public void startService(View view) {
+        startService(new Intent(getBaseContext(), Myservice.class));
+    }
 
+    // Method to stop the service
+    public void stopService(View view) {
+        stopService(new Intent(getBaseContext(), Myservice.class));
     }
 }
